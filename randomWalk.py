@@ -46,7 +46,7 @@ class RandomWalkSimulator:
 def spreturns():
     # Read in S&P 500 Historical Returns
     # Get the S&P 500 closing prices from Yahoo Finance
-    sp500 = yf.Ticker("^GSPC").history(start="1928-01-01", end="2023-07-25")
+    sp500 = yf.Ticker("^GSPC").history(start="1928-01-01", end=None)
 
     # Calculate the daily returns
     sp500["daily_return"] = sp500["Close"].pct_change()
